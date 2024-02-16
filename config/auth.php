@@ -13,6 +13,8 @@ return [
     |
     */
 
+    //THIS IS DEFAULT GUARD, NOT TO BE TOUCHED
+
     'defaults' => [
         'guard' => 'web',
         'passwords' => 'users',
@@ -35,6 +37,8 @@ return [
     |
     */
 
+    //THIS IS WHERE WE SET OUR GUARDS FOR THE APPLICATION,
+
     'guards' => [
         'web' => [
             'driver' => 'session',
@@ -43,6 +47,14 @@ return [
         'admin' => [
             'driver' => 'session',
             'provider' => 'admins',
+        ],
+        'student' => [
+            'driver' => 'session',
+            'provider' => 'students',
+        ],
+        'editor' => [
+            'driver' => 'session',
+            'provider' => 'editors',
         ],
     ],
 
@@ -62,7 +74,8 @@ return [
     | Supported: "database", "eloquent"
     |
     */
-
+    
+    //here we set the models for the providers
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
@@ -71,6 +84,14 @@ return [
         'admins' => [
             'driver' => 'eloquent',
             'model' => App\Models\Admin::class,
+        ],
+        'students' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Student::class,
+        ],
+        'editors' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Editor::class,
         ],
 
         // 'users' => [
