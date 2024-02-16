@@ -1,4 +1,40 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+        THIS MODULE IS FOCUSED ON LARAVEL'S BREEZE IN-BUILT AUTHENTICATION SYSTEM
+
+It explains the appropriate steps to take when integrating with the system, from installation , to integration, to Application and Use.
+
+These afformentioned steps will be documented in this ReadMe.md section for future references
+
+
+STEPS:
+
+1. INSTALL Laravel package from php composer, a package that well suits your current PHP pre-installed .exe in your device, check Laravel documentation (laravel.com) to know this, but its best required you download the most recent PHP and Laravel Package, 
+As of this case-study (BreezeAffair); the laravel 9. was used.
+
+2. After installation from php composer, You can navigate into the directory in which you want to have your laravel application saved in you device, open git-bash and create a new laravel project with the command "composer create-project laravel/laravel AppName", where AppName refers to whatever name of your intended Project.
+
+3. After that is set, we then want to get LARAVEL BREEZE installed in our project, this only takes a few commands to get completed, the commands would be ran in our IDE's Terminal. as in this case-study, IDE used is VSCODE.  (ofcourse other IDEs exist example: PHP STORM. )
+
+4. In the opened terminal, we want to use these sets of command to get breeze installed and integrated into our app
+    - composer require laravel/breeze --dev     //'this is for composer to install breeze in your laravel project//
+    - php artisan breeze:install              // This next command will prompt yo to choose your preferred fron end stack, which in this case study, we chose BLADE //
+    - php artisan migrate 
+    - npm install              //Apparently we also need to install NODE , but before this can work, make sure you have Node pre-installed in your device and it is accessible to the Terminal //
+    - npm  run dev       // This line completes theinstallation process of all the required stack including BLADE / VITE etc for Breeze Front-End.
+
+5. After this is set, you then want to create a database system to be linked to your project, in this case-study, we make use of MySql Database. 
+
+// Link the database created to your laravel project: head to the .env file  
+
+
+
+
+
+
+
+
+
+
+<!-- <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
@@ -63,4 +99,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT). -->
