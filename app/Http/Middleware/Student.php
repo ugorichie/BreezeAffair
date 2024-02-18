@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Student
 {
@@ -16,6 +17,9 @@ class Student
      */
     public function handle(Request $request, Closure $next)
     {
+        if(!Auth::gaurd('Student')->check()){
+            return("");
+        }
         return $next($request);
     }
 }
