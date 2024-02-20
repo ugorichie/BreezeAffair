@@ -43,7 +43,11 @@ As of this case-study (BreezeAffair); the laravel 9. was used.
 
         Seeding into the database simply means, having to put in some data into the database the right way, this action limits possible error to be encountered in the course of the project.
 
-1. 
+1. Creating Factories: the first step to seeding is creating factories, to tell the database seeder what to seed in. Quite interesting as it has to allign with the Model name created, the FACTORY file is located in the 'database' FOLDER where you also have the 'migrations' and 'seeders' file.
+
+2. Factories command: to create factories we use the //php artisan make:factory Student //  -- etc. NOTE. that the naming convention must match with the models.
+
+3. Factory data: when the factory file is created, '
 
 
 
