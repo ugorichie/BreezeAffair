@@ -21,9 +21,17 @@ As of this case-study (BreezeAffair); the laravel 9. was used.
     - npm install              //Apparently we also need to install NODE , but before this can work, make sure you have Node pre-installed in your device and it is accessible to the Terminal //
     - npm  run dev       // This line completes theinstallation process of all the required stack including BLADE / VITE etc for Breeze Front-End.
 
-5. After this is set, you then want to create a database system to be linked to your project, in this case-study, we make use of MySql Database. This is 
+5. After this is set, you then want to create a database system to be linked to your project, in this case-study, we make use of MySql Database. This is easily done by creating a table, and giving it same name in the '.env' file space for database. (see the laravel documention to understand more)
+// Link the database created to your laravel project
 
-// Link the database created to your laravel project: head to the .env file  
+6. After specifying our database in the '.env' file (DB_DATABASE = 'database_name'), we then want to run the artisan command to confim the link   // php artisan migrate //  -----  if this successfully migrates, we should see some new tables in the said new DATABASE.
+
+7. We can also create our own migrations, to which these authentications / gaurds / middlewares will be added to
+    in this case - Student, Admin , Editor was used.
+    ##commands -- //php artisan make:migration Student // -- e.t.c
+
+8. Consequently, a model is required for each migration created, hence we run commands to create the required MODELS
+    ##commands -- //php artisan make:model Student // -- e.t.c
 
 
 
