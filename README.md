@@ -21,7 +21,7 @@ As of this case-study (BreezeAffair); the laravel 9. was used.
     - npm install              //Apparently we also need to install NODE , but before this can work, make sure you have Node pre-installed in your device and it is accessible to the Terminal //
     - npm  run dev       // This line completes theinstallation process of all the required stack including BLADE / VITE etc for Breeze Front-End.
 
-5. After this is set, you then want to create a database system to be linked to your project, in this case-study, we make use of MySql Database. 
+5. After this is set, you then want to create a database system to be linked to your project, in this case-study, we make use of MySql Database. This is 
 
 // Link the database created to your laravel project: head to the .env file  
 
