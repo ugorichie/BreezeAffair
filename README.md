@@ -5,16 +5,17 @@ It explains the appropriate steps to take when integrating with the system, from
 These afformentioned steps will be documented in this ReadMe.md section for future references
 
 
-STEPS:
+<!-- STEPS: -->
+        BASE 1:  INSTALLATION / DATABASE MIGRATION AND MODEL
 
-1. INSTALL Laravel package from php composer, a package that well suits your current PHP pre-installed .exe in your device, check Laravel documentation (laravel.com) to know this, but its best required you download the most recent PHP and Laravel Package, 
+1. Instalattion : INSTALL Laravel package from php composer, a package that well suits your current PHP pre-installed .exe in your device, check Laravel documentation (laravel.com) to know this, but its best required you download the most recent PHP and Laravel Package, 
 As of this case-study (BreezeAffair); the laravel 9. was used.
 
-2. After installation from php composer, You can navigate into the directory in which you want to have your laravel application saved in you device, open git-bash and create a new laravel project with the command "composer create-project laravel/laravel AppName", where AppName refers to whatever name of your intended Project.
+2. Create laravel project:  After installation from php composer, You can navigate into the directory in which you want to have your laravel application saved in you device, open git-bash and create a new laravel project with the command "composer create-project laravel/laravel AppName", where AppName refers to whatever name of your intended Project.
 
-3. After that is set, we then want to get LARAVEL BREEZE installed in our project, this only takes a few commands to get completed, the commands would be ran in our IDE's Terminal. as in this case-study, IDE used is VSCODE.  (ofcourse other IDEs exist example: PHP STORM. )
+3. Breeze Instalation: we then want to get LARAVEL BREEZE installed in our project, this only takes a few commands to get completed, the commands would be ran in our IDE's Terminal. as in this case-study, IDE used is VSCODE.  (ofcourse other IDEs exist example: PHP STORM. )
 
-4. In the opened terminal, we want to use these sets of command to get breeze installed and integrated into our app
+4. Breeze Installation complete: In the opened terminal, we want to use these sets of command to get breeze installed and integrated into our app
     - composer require laravel/breeze --dev     //'this is for composer to install breeze in your laravel project//
     - php artisan breeze:install              // This next command will prompt yo to choose your preferred fron end stack, which in this case study, we chose BLADE //
     - php artisan migrate 
@@ -24,14 +25,25 @@ As of this case-study (BreezeAffair); the laravel 9. was used.
 5. After this is set, you then want to create a database system to be linked to your project, in this case-study, we make use of MySql Database. This is easily done by creating a table, and giving it same name in the '.env' file space for database. (see the laravel documention to understand more)
 // Link the database created to your laravel project
 
-6. After specifying our database in the '.env' file (DB_DATABASE = 'database_name'), we then want to run the artisan command to confim the link   // php artisan migrate //  -----  if this successfully migrates, we should see some new tables in the said new DATABASE.
+6. Migrate to database:  After specifying our database in the '.env' file (DB_DATABASE = 'database_name'), we then want to run the artisan command to confim the link   // php artisan migrate //  -----  if this successfully migrates, we should see some new tables in the said new DATABASE.
 
-7. We can also create our own migrations, to which these authentications / gaurds / middlewares will be added to
+7. Create Migrations: We can also create our own migrations, to which these authentications / gaurds / middlewares will be added to
     in this case - Student, Admin , Editor was used.
     ##commands -- //php artisan make:migration Student // -- e.t.c
 
-8. Consequently, a model is required for each migration created, hence we run commands to create the required MODELS
-    ##commands -- //php artisan make:model Student // -- e.t.c
+8. Create corresponding model :  Consequently, a model is required for each migration created, hence we run commands to create the required MODELS      ##commands -- //php artisan make:model Student // -- e.t.c
+
+9. Edit new migration files : ensure that the new migrations created with the commands in (7.) have adeqaute columns and datatypes to the kind of data to be saved in them when the table are to be created {schema::create ...} 
+
+10. Edit new model files: ensure that the new models created with the commands in (8.) have the correct 'FILLABLE'-> this is an array of required data to be passed to the db.
+
+
+
+                BASE 2: SEEDING DATA INTO THE DATABASE
+
+        Seeding into the database simply means, having to put in some data into the database the right way, this action limits possible error to be encountered in the course of the project.
+
+1. 
 
 
 
