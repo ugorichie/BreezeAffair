@@ -8,6 +8,8 @@ These afformentioned steps will be documented in this ReadMe.md section for futu
 <!-- STEPS: -->
         BASE 1:  INSTALLATION / DATABASE MIGRATION AND MODEL
 
+        folders/files involved: 'root folder' , 'terminal' , '.env' , 'database\migrations' , 'app\Models' .
+
 1. Instalattion : INSTALL Laravel package from php composer, a package that well suits your current PHP pre-installed .exe in your device, check Laravel documentation (laravel.com) to know this, but its best required you download the most recent PHP and Laravel Package, 
 As of this case-study (BreezeAffair); the laravel 9. was used.
 
@@ -41,13 +43,16 @@ As of this case-study (BreezeAffair); the laravel 9. was used.
 
                 BASE 2: SEEDING DATA INTO THE DATABASE
 
-        Seeding into the database simply means, having to put in some data into the database the right way, this action limits possible error to be encountered in the course of the project.
+       >>  Seeding into the database simply means, having to put in some data into the database the right way, this action limits possible error to be encountered in the course of the project.
+
+       > folders/files involved: 'root folder' , 'terminal' , 'database\factories' , 'database\migrations' ,'database\seeders', 'app\Http\Kenrnel.php' .
+
 
 1. Creating Factories: the first step to seeding is creating factories, to tell the database seeder what to seed in. Quite interesting as it has to allign with the Model name created, the FACTORY file is located in the 'database' FOLDER where you also have the 'migrations' and 'seeders' file.
 
 2. Factories command: to create factories we use the //php artisan make:factory Student //  -- etc. NOTE. that the naming convention must match with the models.
 
-3. Factory data: when the factory file is created, '
+3. Factory data: when the factory file is created, 'if file is empty, navigate to the already existing /UserFactory/ and copy content, then in the '
 
 
 

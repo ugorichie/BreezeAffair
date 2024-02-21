@@ -53,6 +53,14 @@ class Kernel extends HttpKernel
      * @var array<string, class-string|string>
      */
     protected $routeMiddleware = [
+        
+        // THIS IS CREATED AFTER THE MIDDLEWARES HAVE BEEN SET in the Middleware folder
+        'student' => \App\Http\Middleware\Student::class,
+        'editor' => \App\Http\Middleware\Editor::class,
+        'admin' => \App\Http\Middleware\Admin::class,
+        //ends here
+
+
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'auth.session' => \Illuminate\Session\Middleware\AuthenticateSession::class,
