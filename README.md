@@ -60,6 +60,28 @@ As of this case-study (BreezeAffair); the laravel 9. was used.
 
 
 
+                BASE 3: GAURDING AND CREATING MIDDLEWARE (THIS IS IF YOU WANT TO SET YOUR OWN AUTH-GUARD asides THE ONE LARAVEL HAS ONBUILT)
+
+        >> Guarding, a concept in php that improves/integrates stricter authentication in a system/application
+
+        >folders/files inovled: 'root-folder' , 'config\auth.php', 'app\Http\Middleware' , 'app\Http\Kernel.php'
+
+1. Authentication definition: First in this base is to define your systems gaurd, and this is done in the 'root-folder\config\auth.php', in the authentication gaurds section, where we 'gaurds => multi-dimentional array with key value ('web') and second-level-key ('driver', 'provider'), where we then set multiple gaurds for our different user\choice according to our system
+
+2. Set Middleware: Middleware is like a guide as to how our systems Guard should function, it can perform various tasks such as authentication, logging, session management first we need to use rhe command to create a middle;  ' php artisan make:middleware Student' .
+This command creates a file in the middleware as to how to handle\check if the STUDENT guard is set, and it the person loging in is a student ( in the student db ), else the person be  redirected to a specified place
+NB: remeber to require/use the AUTH class (use Illuminate\Support\Facades\Auth)
+
+4. Kernel.php :  Kernel.php serves as the central location for defining HTTP middleware. 
+ we call the just created middleware classes in the app\Http\Kernel.php -> this is done in the protected function routeMiddleware --> we call the middlware class like 'student' => \App\Http\Middleware\Student::class
+
+
+
+
+ S.O.U.R.C.E => https://youtu.be/c7EZgGVwU60?si=XfqRbKEVQqfdEUVP 
+
+
+
 
 
 
