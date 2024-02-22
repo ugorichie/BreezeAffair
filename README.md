@@ -52,7 +52,12 @@ As of this case-study (BreezeAffair); the laravel 9. was used.
 
 2. Factories command: to create factories we use the //php artisan make:factory Student //  -- etc. NOTE. that the naming convention must match with the models.
 
-3. Factory data: when the factory file is created, 'if file is empty, navigate to the already existing /UserFactory/ and copy content, then in the '
+3. Factory data: when the factory file is created, 'if file is empty, navigate to the already existing /UserFactory/ and copy content, then in the factory-file you created, paste and edit the 'public function definition'  to suit your seeding, include the necessary table clumns you will want to seed in the database, and you can choose to put in 'hard-coded' values or use the laravel unbuil function 'fake()' to seed in any random data
+
+4. DatabaseSeeder.php: This is the last step for seeding into the DB, to do this we navigate to the 'databaseseeder.php' file in the database folder (database\databasefolder), and in the 'public folder run', we initiate commands to require/call the Model::factory that we created above   ----> \App\Models\Student::factory()->create().
+
+5. Lastly we run the 'artisan' command that makes everything run. --> / db:seed /
+
 
 
 
